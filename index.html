@@ -1,130 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible"
-      content="IE=edge" />
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ABATA - Tehničko ispitivanje i analiza</title>
-    <link rel="stylesheet"
-      href="style.css" />
-    <link rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
   </head>
 
   <body>
     <header class="header">
       <div class="header__inner">
-        <figure class="header__figure">
-          <a href="#">
-            <img src="./Assets/Abata logo transparentni II.PNG"
-              alt="Abata - Tvrtka za Tehničko ispitivanje i analizu"
-              class="header__logo" />
-          </a>
-        </figure>
+        <a href="#" class="header__logo-link">
+          <img
+            src="./Assets/Abata logo transparentni_crop.png"
+            alt="Abata - Tvrtka za Tehničko ispitivanje i analizu"
+            class="header__logo"
+          />
+        </a>
         <nav class="nav">
-          <a class="nav__link"
-            href="#onama">O nama</a>
-          <a class="nav__link"
-            href="#usluge">Usluge</a>
-          <a class="nav__link"
-            href="#kontakt">Kontakt</a>
-          </ul>
+          <a class="nav__link" href="#onama">O nama</a>
+          <a class="nav__link" href="#usluge">Usluge</a>
+          <a class="nav__link" href="#kontakt">Kontakt</a>
         </nav>
       </div>
     </header>
+
     <main>
-      <section class="section"
-        id="onama">
+      <section class="landing">
+        <figure class="landing__figure">
+          <img
+            class="landing__img"
+            src="./Assets/Abata_landing.jpg"
+            alt="Abata početna slika"
+          />
+        </figure>
+      </section>
+
+      <section class="section" id="onama">
         <div class="section__inner">
-          <img src="./Assets/Abata logo transparentni_crop.png"
-            alt="Abata - Tvrtka za Tehničko ispitivanje i analizu"
-            class="onama__image">
-          <div class="onama__text">
-            <div class="text">
-              <i class="uil uil-phone"></i>
-              <p>+385 98 221 233</p>
+          <article class="onama__wrapper">
+            <div class="onama__figure">
+              <img
+                class="onama__img"
+                src="./Assets/propust.JPG"
+                alt="Abata nadzor ispitivanja propust"
+              />
             </div>
-            <div class="text">
-              <i class="uil uil-location-point"></i>
-              <p>Nova Cesta 52, 10000 Zagreb, Hrvatska</p>
+            <div class="onama_text-wrapper">
+              <h2 class="section__heading">O nama</h2>
+              <h3 class="onama__subtitle">Podnaslov</h3>
+              <p class="onama__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus similique doloribus veritatis accusantium sit
+                assumenda dolores in. Vitae provident voluptate ex suscipit
+                impedit, quis ea et mollitia, doloribus voluptas asperiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus similique doloribus veritatis accusantium sit
+                assumenda dolores in. Vitae provident voluptate ex suscipit
+                impedit, quis ea et mollitia, doloribus voluptas asperiores.
+              </p>
             </div>
-            <div class="text">
-              <i class="uil uil-envelope"></i>
-              <p>bruno.brckan@abata.hr</p>
-            </div>
-            <div class="text">
-              <i class="uil uil-angle-right-b"></i>
-              <p>OIB: 32563165629</p>
-            </div>
-          </div>
+          </article>
         </div>
       </section>
-      <section class="section"
-        id="usluge">
-        <div class="section__inner">
-          <h2 class="section__heading">Naše usluge</h2>
-          <div class="usluge__wrapper">
-            <p class="usluge__text">Projektiranje i građenje građevina te stručni nadzor građenja</p>
-            <p class="usluge__text">Tehničko ispitivanje i analiza</p>
-            <p class="usluge__text">Istraživanje i razvoj na području građevine</p>
-            <p class="usluge__text">Upravljanje projektima gradnje</td>
-            <p class="usluge__text">Građenje i rekonstrukcije javnih cesta</p>
-            <p class="usluge__text">Djelatnost snimanja iz zraka</p>
-            <p class="usluge__text">Zaštita na radu</p>
-            <p class="usluge__text">Istraživanje tržišta i ispitivanje javnog mnijenja</p>
-          </div>
-        </div>
-      </section>
-      <section class="section"
-        id="kontakt">
+
+      <section class="section" id="kontakt">
         <div class="section__inner">
           <h2 class="section__heading">Kontakt informacije</h2>
           <div class="grid">
-            <div class="card">
-              <h3>Adresa</h3>
-              <article class="article__info">
-                <div class="text text_kontakt">
+            <div class="info__card">
+              <h3 class="section__subheading subheading_address">Adresa</h3>
+              <article class="info__wraper">
+                <div class="info__text">
                   <i class="uil uil-phone"></i>
                   <p>+385 98 221 233</p>
                 </div>
-                <div class="text text_kontakt">
+                <div class="info__text">
                   <i class="uil uil-location-point"></i>
                   <p>Nova Cesta 52, 10000 Zagreb, Hrvatska</p>
                 </div>
-                <div class="text text_kontakt">
+                <div class="info__text">
                   <i class="uil uil-envelope"></i>
                   <p>bruno.brckan@abata.hr</p>
                 </div>
+                <div class="info__text">
+                  <i class="uil uil-envelope"></i>
+                  <p>promjeni ikonu OIB: 32563165629</p>
+                </div>
               </article>
             </div>
-            <article class="article__input">
-              <h3>Kontakt obrazac</h3>
-              <form action="">
-                <input type="name"
-                  class="form__input"
-                  placeholder="Ime i Prezime"
-                  required />
-                <input type="email"
-                  class="form__input"
-                  placeholder="E-Mail"
-                  required />
-                <textarea placeholder="Poruka"
-                  class="form__input"
-                  required></textarea>
-                <input type="submit"
-                  value="Pošalji"
-                  class="button" />
+
+            <article class="input__card">
+              <h3 class="section__subheading">Kontakt obrazac</h3>
+              <form class="input__wrapper" action="">
+                <input
+                  type="name"
+                  class="input__form input__form_short"
+                  placeholder="Ime i Prezime*"
+                  required
+                />
+                <input
+                  type="email"
+                  class="input__form input__form_short"
+                  placeholder="E-Mail*"
+                  required
+                />
+                <input
+                  type="tel"
+                  class="input__form input__form_short"
+                  placeholder="Kontakt broj*"
+                  required
+                />
+                <input
+                  type="text"
+                  class="input__form input__form_short"
+                  placeholder="Ime firme"
+                />
+                <textarea
+                  placeholder="Poruka"
+                  class="input__form"
+                  required
+                ></textarea>
+                <input type="submit" value="Pošalji" class="input__button" />
               </form>
             </article>
           </div>
         </div>
       </section>
     </main>
+
     <footer></footer>
     <script src="script.js"></script>
   </body>
-
 </html>
