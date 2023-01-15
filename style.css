@@ -7,8 +7,10 @@
 }
 
 :root {
-  --background-color: rgb(207, 207, 207);
   --text-color: rgb(37, 37, 37);
+  --text-font-primary: sans-serif;
+  --background-color: rgb(207, 207, 207);
+  --background-color-secondary: rgba(208, 228, 96, 0.59);
 }
 
 html {
@@ -22,8 +24,12 @@ body {
 p,
 h2,
 h3 {
-  font-family: sans-serif;
+  font-family: var(--text-font-primary);
   color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* --------------- Header Styling ---------------- */
@@ -36,8 +42,6 @@ h3 {
   left: 0;
   z-index: 10;
   transition: 0.3s;
-  /* box-shadow: 0 14px 28px rgba(106, 106, 106, 0.25),
-    0 10px 10px rgba(106, 106, 106, 0.25); */
 }
 
 .header.scrolled {
@@ -91,11 +95,11 @@ h3 {
 .nav__link {
   position: relative;
   margin-right: 30px;
-  color: rgb(37, 37, 37);
-  font-family: sans-serif;
-  text-decoration: none;
+  color: var(--text-color);
+  font-family: var(--text-font-primary);
   font-size: 16px;
   letter-spacing: 0.4px;
+  text-decoration: none;
   opacity: 0.9;
   transition: 0.3s;
 }
@@ -107,7 +111,7 @@ h3 {
   width: 0;
   height: 3px;
   border-radius: 5px;
-  background-color: rgb(37, 37, 37);
+  background-color: var(--text-color);
   bottom: -2px;
   left: 0;
   opacity: 0.85;
@@ -214,7 +218,7 @@ h3 {
   margin: 0 auto;
   width: 500px;
   border-radius: 32px;
-  background-color: rgba(208, 228, 96, 0.59);
+  background-color: var(--background-color-secondary);
   box-shadow: rgb(209, 228, 96) 0px 0px 70px 10px;
 }
 
@@ -247,7 +251,7 @@ h3 {
   background: #e8e8e8;
   transition: 0.3s;
   outline-color: #e8e8e8;
-  font-family: sans-serif;
+  font-family: var(--text-font-primary);
   letter-spacing: 1px;
 }
 
@@ -257,8 +261,8 @@ h3 {
 
 .input__form:focus {
   /* poigraj se sa ovim */
-  outline-color: #e8e8e8;
-  background: #e8e8e8;
+  outline-color: var(--background-color-secondary);
+  background: var(--background-color-secondary);
   transition: 0.1s;
   outline: none;
 }
@@ -267,37 +271,56 @@ textarea.input__form {
   resize: none;
   min-height: 170px;
   width: 100%;
-  font-family: sans-serif;
+  font-family: var(--text-font-primary);
   letter-spacing: 1px;
 }
 
+textarea.input__form::-webkit-scrollbar {
+  width: 14px;
+}
+
+textarea.input__form::-webkit-scrollbar-track {
+  background-color: rgba(37, 37, 37, 0.5);
+  border-radius: 50px;
+}
+
+textarea.input__form::-webkit-scrollbar-thumb {
+  background-color: rgba(208, 228, 96, 0.6);
+  border-radius: 50px;
+  border: 3px solid rgba(37, 37, 37, 0.5);
+}
+
+textarea.input__form::-webkit-scrollbar-button {
+  display: none;
+}
+
 .input__button {
-  font-family: sans-serif;
+  font-family: var(--text-font-primary);
   font-size: 15px;
+  font-weight: 600;
   padding: 17px 40px;
   margin: 3px 0;
   border-radius: 50px;
   border: 0;
-  background-color: rgb(237, 237, 237);
+  background-color: #e8e8e8;
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 1px;
-  /* text-transform: uppercase; */
   transition: all 0.5s ease;
   cursor: pointer;
 }
 
 .input__button:hover {
   letter-spacing: 2px;
-  background-color: rgba(208, 228, 96, 0.59);
+  background-color: var(--background-color-secondary);
   color: var(--text-color);
-  box-shadow: rgba(208, 228, 96, 0.59) 0px 7px 29px 0px;
+  box-shadow: var(--background-color-secondary) 0px 7px 29px 0px;
 }
 
 .input__button:active {
   letter-spacing: 3px;
-  background-color: rgba(208, 228, 96, 0.59));
+  background-color: var(--background-color-secondary);
   color: var(--text-color);
-  box-shadow: rgba(208, 228, 96, 0.59) 0px 0px 0px 0px;
+  box-shadow: var(--background-color-secondary) 0px 0px 0px 0px;
   transform: translateY(10px);
   transition: 100ms;
 }
