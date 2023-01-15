@@ -234,9 +234,6 @@ body::-webkit-scrollbar {
   font-size: 20px;
 }
 
-.input__card {
-}
-
 .input__wrapper {
   display: flex;
   justify-content: center;
@@ -260,7 +257,6 @@ body::-webkit-scrollbar {
 }
 
 .input__form:focus {
-  /* poigraj se sa ovim */
   outline-color: var(--background-color-secondary);
   background: var(--background-color-secondary);
   transition: 0.1s;
