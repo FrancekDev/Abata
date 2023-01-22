@@ -7,8 +7,8 @@
 }
 
 :root {
-  --text-color: rgb(37, 37, 37);
   --text-font-primary: sans-serif;
+  --text-color: rgb(37, 37, 37);
   --background-color: rgb(207, 207, 207);
   --background-color-secondary: rgba(208, 228, 96, 0.59);
 }
@@ -44,10 +44,13 @@ body::-webkit-scrollbar {
   transition: 0.3s;
 }
 
+/* napravi da se header smanji kad se zaskrola*/
+
 .header.scrolled {
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
+  z-index: 11;
 }
 
 .header__inner.scrolled {
@@ -234,6 +237,10 @@ body::-webkit-scrollbar {
   font-size: 20px;
 }
 
+.input__card {
+  margin: 0 16px;
+}
+
 .input__wrapper {
   display: flex;
   justify-content: center;
@@ -319,4 +326,174 @@ textarea.input__form::-webkit-scrollbar-button {
   box-shadow: var(--background-color-secondary) 0px 0px 0px 0px;
   transform: translateY(10px);
   transition: 100ms;
+}
+
+/* --------------- Usluge Section Styling ---------------- */
+
+.usluge__grid {
+  margin: 24px auto;
+  padding: 0 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  row-gap: 24px;
+}
+
+.usluge__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e8e8e8;
+  border-radius: 16px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+.usluge__figure {
+  margin: 24px;
+  width: 300px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.usluge__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+}
+
+.usluge__img:hover {
+  transform: scale(1.1);
+}
+
+.usluge__text {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* --------------- Gallery Section Styling ---------------- */
+
+.gallery /*container*/ {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 100px 300px; /*mjenja visinu reda naizmjenicno, mozda nije potrebno*/
+  gap: 10px;
+  grid-auto-flow: dense;
+}
+
+/* modificiranje slika po širini*/
+.gallery__wrapper_w-1 {
+  grid-column: span 1;
+}
+.gallery__wrapper_w-2 {
+  grid-column: span 2;
+}
+.gallery__wrapper_w-3 {
+  grid-column: span 3;
+}
+.gallery__wrapper_w-4 {
+  grid-column: span 4;
+}
+.gallery__wrapper_w-5 {
+  grid-column: span 5;
+}
+.gallery__wrapper_w-6 {
+  grid-column: span 6;
+}
+
+/* modificiranje slika po visini*/
+.gallery__wrapper_h-1 {
+  grid-row: span 1;
+}
+.gallery__wrapper_h-2 {
+  grid-row: span 2;
+}
+.gallery__wrapper_h-3 {
+  grid-row: span 3;
+}
+.gallery__wrapper_h-4 {
+  grid-row: span 4;
+}
+.gallery__wrapper_h-5 {
+  grid-row: span 5;
+}
+.gallery__wrapper_h-6 {
+  grid-row: span 6;
+}
+
+.gallery__item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery__figure {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%; /* pozicionira sliku u sredinu */
+  /* cursor: pointer; */
+  transition: 0.5s ease-in-out;
+}
+
+.gallery__img:hover {
+  transform: scale(1.3);
+}
+
+.gallery__text {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e8e8e8;
+  font-size: 24px;
+  pointer-events: none;
+  z-index: 10;
+  transition: 0.3s ease-in-out;
+  -webkit-backdrop-filter: blur(5px) saturate(1.8);
+  backdrop-filter: blur(5px) saturate(1.8);
+}
+
+.gallery__item:hover .gallery__text {
+  opacity: 1;
+  animation: move-down 0.3s linear;
+  padding: 8px;
+}
+
+@media (max-width: 500px) {
+  .gallery /*container*/ {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gallery__wrapper_w-1,
+  .gallery__wrapper_w-2,
+  .gallery__wrapper_w-3,
+  .gallery__wrapper_w-4,
+  .gallery__wrapper_w-5,
+  .gallery__wrapper_w-6 {
+    grid-column: sapn 1;
+  }
+}
+
+/*pomicanje texta prema dolje */
+@keyframes move-down {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 35%;
+  }
+  100% {
+    top: 50%;
+  }
 }
