@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ABATA - Tehničko ispitivanje i analiza</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -14,6 +13,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <title>ABATA - Tehničko ispitivanje i analiza</title>
   </head>
 
   <body>
@@ -58,16 +60,46 @@
             </div>
 
             <div class="onama_text-wrapper">
-              <h2 class="section__heading">O nama</h2>
+              <h2 class="section__heading section__heading_onama">O nama</h2>
               <p class="onama__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellendus similique doloribus veritatis accusantium sit
-                assumenda dolores in. Vitae provident voluptate ex suscipit
-                impedit, quis ea et mollitia, doloribus voluptas asperiores.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellendus similique doloribus veritatis accusantium sit
-                assumenda dolores in. Vitae provident voluptate ex suscipit
-                impedit, quis ea et mollitia, doloribus voluptas asperiores.
+                U Abati posvećeni smo pružanju vrhunskih usluga u području
+                građevine, sa fokusom na geotehnici i hidrotehničkim
+                građevinama. Obavljamo poslove nadziranja gradnje, projektiranja
+                te ispitivanja tla. Abata je osnovana s ciljem donošenja
+                inovativnih rješenja u građevinskoj industriji. S naglaskom na
+                korištenju najnovije tehnologije i tehnika, trudimo se dostaviti
+                projekte koji nisu samo funkcionalni, već održivi i ekonomični.
+              </p>
+              <p class="onama__text">
+                Naše usluge uključuju, ali nisu ograničene na:
+              </p>
+              <ul class="onama__lista">
+                <li>
+                  Geotehnika: nudimo širok raspon geotehničkih usluga, poput
+                  ispitivanja tla, analize stabilnosti, projektiranje
+                  temeljenja, iskopa i još mnogo toga.
+                </li>
+                <li>
+                  Nadzor i projektiranje: pružamo usluge nadzora i projektiranja
+                  za sve vrste građevinskih projekata, osiguravajući da se oni
+                  završe na vrijeme i unutar proračuna.
+                </li>
+                <li>
+                  Monitoring: provedba kontrolnih ili tekućih ispitivanja,
+                  ugradnja opremae za mjerenje podzemnih voada i pomaka u tlu.
+                </li>
+              </ul>
+
+              <p class="onama__text">
+                U Abati, razumijemo važnost jake komunikacije i suradnje te
+                radimo usko sa našim klijentima kako bismo potpuno razumjeli
+                njihove potrebe, ciljeve i osigurali da je konačni proizvod
+                premašio njihova očekivanja. Izradu projekata prilagođavamo tako
+                da su funkcionalni, održivi i ekonomični. Pružamo usluge
+                najviših razina i posvećeni smo kontinuiranom poboljšanju naših
+                procesa. Drago nam je što smo dio građevinske industrije i
+                radujemo se suradnji s vama. Kontaktirajte nas danas kako bismo
+                saznali više o tome kako možemo pomoći vašem sljedećem projektu.
               </p>
             </div>
           </article>
@@ -76,7 +108,7 @@
 
       <section class="section" id="usluge">
         <div class="section__inner">
-          <h2 class="section__heading">Usluge</h2>
+          <h2 class="section__heading section__heading_usluge">Usluge</h2>
           <div class="usluge__grid">
             <article class="usluge__card">
               <div class="usluge__figure">
@@ -149,7 +181,9 @@
 
       <section class="section" id="kontakt">
         <div class="section__inner">
-          <h2 class="section__heading">Kontakt informacije</h2>
+          <h2 class="section__heading section__heading_kontakt">
+            Kontakt informacije
+          </h2>
           <div class="grid">
             <div class="info__card">
               <h3 class="section__subheading subheading_address">Adresa</h3>
@@ -178,25 +212,25 @@
               <form class="input__wrapper" action="">
                 <input
                   type="name"
-                  class="input__form input__form_short"
+                  class="input__form"
                   placeholder="Ime i Prezime*"
                   required
                 />
                 <input
                   type="tel"
-                  class="input__form input__form_short"
+                  class="input__form"
                   placeholder="Kontakt broj*"
                   required
                 />
                 <input
                   type="email"
-                  class="input__form input__form_short"
+                  class="input__form"
                   placeholder="E-Mail*"
                   required
                 />
                 <input
                   type="text"
-                  class="input__form input__form_short"
+                  class="input__form"
                   placeholder="Ime firme"
                 />
                 <textarea
