@@ -13,7 +13,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    <meta name="format-detection" content="telephone=yes" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("xXODP-lWWgX-hUFZ8");
+      })();
+    </script>
 
     <title>ABATA - Tehničko ispitivanje i analiza</title>
   </head>
@@ -208,37 +217,55 @@
             </div>
 
             <article class="input__card">
-              <h3 class="section__subheading">Kontakt obrazac</h3>
-              <form class="input__wrapper" action="">
+              <!-- <h3 class="section__subheading">Kontakt obrazac</h3> -->
+              <form class="input__wrapper" id="contact_form">
+                <input type="hidden" name="contact_number" />
                 <input
+                  class="input__form"
+                  id="from_name"
                   type="name"
-                  class="input__form"
                   placeholder="Ime i Prezime*"
+                  name="from_name"
                   required
                 />
                 <input
+                  class="input__form"
+                  id="phone_num"
                   type="tel"
-                  class="input__form"
                   placeholder="Kontakt broj*"
+                  name="phone_num"
                   required
                 />
                 <input
+                  class="input__form"
+                  id="email_id"
                   type="email"
-                  class="input__form"
                   placeholder="E-Mail*"
+                  name="email_id"
                   required
                 />
                 <input
-                  type="text"
                   class="input__form"
+                  id="company_name"
+                  type="text"
                   placeholder="Ime firme"
+                  name="company_name"
                 />
                 <textarea
-                  placeholder="Poruka"
                   class="input__form"
+                  id="message"
+                  placeholder="Poruka"
+                  name="message"
                   required
                 ></textarea>
-                <input type="submit" value="Pošalji" class="input__button" />
+                <button
+                  id="button"
+                  type="button"
+                  value="Pošalji"
+                  class="input__button"
+                >
+                  Pošalji
+                </button>
               </form>
             </article>
           </div>
