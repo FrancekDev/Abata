@@ -1,9 +1,11 @@
 /* --------------- General Stuff ---------------- */
 
-const header = document.querySelector("header");
+const header = document.querySelector(".header");
 
 const submit = document.getElementById("contact_form");
 const button = document.getElementById("button");
+
+const hamburger = document.querySelector(".hamburger");
 
 /*
 const from_name = document.getElementById("from_name");
@@ -21,6 +23,13 @@ function stickyNavbar() {
 stickyNavbar();
 
 window.addEventListener("scroll", stickyNavbar);
+
+/* --------------- Hamburger Menu Form ---------------- */
+
+hamburger.addEventListener("click", () => {
+  document.body.classList.toggle("open");
+  document.body.classList.toggle("close");
+});
 
 /* --------------- emailJS Form ---------------- */
 
