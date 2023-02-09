@@ -33,21 +33,38 @@ hamburger.addEventListener("click", () => {
 
 /* --------------- emailJS Form ---------------- */
 
-/*  -----> RADI ali ne rquired <-----
+/*-----> RADI ali ne rquired <-----*/
 
-button.addEventListener("click", function sendMail() {
-  let params = {
-    from_name: document.getElementById("from_name").value,
-    phone_num: document.getElementById("phone_num").value,
-    email_id: document.getElementById("email_id").value,
-    company_name: document.getElementById("company_name").value,
-    message: document.getElementById("message").value,
-  };
-  emailjs.send("personal_email", "template_lar1gag", params).then(function () {
-    alert(`Poslano!`);
-  });
+button.addEventListener("click", function () {
+  const fromName = document.getElementById("from_name");
+  const phoneNum = document.getElementById("phone_num");
+  const email = document.getElementById("email_id");
+
+  let isFormValid = false;
+
+  if (
+    fromName.checkValidity() &&
+    phoneNum.checkValidity() &&
+    email.checkValidity()
+  ) {
+    isFormValid = true;
+  }
+
+  if (isFormValid) {
+    let params = {
+      from_name: document.getElementById("from_name").value,
+      phone_num: document.getElementById("phone_num").value,
+      email_id: document.getElementById("email_id").value,
+      company_name: document.getElementById("company_name").value,
+      message: document.getElementById("message").value,
+    };
+    emailjs
+      .send("personal_email", "template_lar1gag", params)
+      .then(function () {
+        alert(`Poslano!`);
+      });
+  }
 });
-*/
 
 /* RADI ali ne šalje vrijednosti
 let params = {
