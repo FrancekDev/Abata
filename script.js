@@ -21,11 +21,11 @@ window.addEventListener("scroll", stickyNavbar);
 
 /* --------------- Hamburger Menu Form ---------------- */
 
-let isOpen = false;
+// let isOpen = false;
 
-if ((document.body.classList = "open")) {
-  isOpen = true;
-}
+// if ((document.body.classList = "open")) {
+//   isOpen = true;
+// }
 
 hamburger.addEventListener("click", () => {
   document.body.classList.toggle("open");
@@ -62,8 +62,29 @@ button.addEventListener("click", function () {
     };
     emailjs
       .send("personal_email", "template_lar1gag", params)
-      .then(function () {
-        alert(`Poslano!`);
+      .then(function sendEmail() {
+        const alertMessageEl = document.querySelector(".alert__message");
+        alertMessageEl.style.display = "block";
+
+        setTimeout(() => {
+          alertMessageEl.style.display = "none";
+        }, 3000);
       });
   }
 });
+
+/* --------------- Image Touch Mechanic ---------------- */
+
+const galleryImage = document.querySelector(".gallery__img");
+
+/*
+const isTouch = function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
+*/
+
+// if (window.innerWidth < 770) {
+//   galleryImage.addEventListener("touchStart", function () {});
+// }

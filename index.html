@@ -142,7 +142,7 @@
             <article class="usluge__card">
               <div class="usluge__figure">
                 <img
-                  src="./Assets/nadzor.jpg"
+                  src="./Assets/nadzor_r.png"
                   alt="Stručni nadzor građenja"
                   class="usluge__img"
                 />
@@ -155,7 +155,7 @@
             <article class="usluge__card">
               <div class="usluge__figure">
                 <img
-                  src="./Assets/ispitivanja.jpg"
+                  src="./Assets/ispitivanja_r.png"
                   alt="Tehničko ispitivanje i analiza"
                   class="usluge__img"
                 />
@@ -166,7 +166,7 @@
             <article class="usluge__card">
               <div class="usluge__figure">
                 <img
-                  src="./Assets/projektiranje.jpg"
+                  src="./Assets/projektiranje_r.png"
                   alt="Projektiranje građevina"
                   class="usluge__img"
                 />
@@ -179,7 +179,7 @@
             <article class="usluge__card">
               <div class="usluge__figure">
                 <img
-                  src="./Assets/teh_promatranje.JPG"
+                  src="./Assets/teh_promatranje_r.png"
                   alt=""
                   class="usluge__img"
                 />
@@ -190,7 +190,7 @@
             <article class="usluge__card">
               <div class="usluge__figure">
                 <img
-                  src="./Assets/konzultant.jpg"
+                  src="./Assets/konzultant_r.png"
                   alt="Konzultantske usluge"
                   class="usluge__img"
                 />
@@ -200,7 +200,7 @@
 
             <article class="usluge__card">
               <div class="usluge__figure">
-                <img src="./Assets/uvodenje.jpg" alt="" class="usluge__img" />
+                <img src="./Assets/uvodenje_r.png" alt="" class="usluge__img" />
               </div>
               <p class="usluge__text">Uvođenje izvođača u posao</p>
             </article>
@@ -227,10 +227,7 @@
                   </p>
                 </div>
                 <div class="info__text">
-                  <p><i class="uil uil-envelope"></i>bruno.brckan@abata.hr</p>
-                </div>
-                <div class="info__text">
-                  <p><i class="uil uil-angle-right-b"></i>OIB: 32563165629</p>
+                  <p><i class="uil uil-envelope"></i>info@abata.hr</p>
                 </div>
               </article>
             </div>
@@ -239,7 +236,7 @@
               <h3 class="section__subheading subheading_form">
                 Kontakt obrazac
               </h3>
-              <form class="input__wrapper" id="contact_form">
+              <form method="post" class="input__wrapper" id="contact_form">
                 <input type="hidden" name="contact_number" />
                 <input
                   class="input__form"
@@ -280,6 +277,7 @@
                   required
                 ></textarea>
                 <button
+                  onclick="sendEmail()"
                   id="button"
                   type="button"
                   value="Pošalji"
@@ -288,13 +286,38 @@
                   Pošalji
                 </button>
               </form>
+              <p class="alert__message">Upit je uspješno poslan!</p>
             </article>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__text">
+        <p>&#169; Abata d.o.o.</p>
+      </div>
+      <div class="footer__text">
+        <a
+          target="https://www.linkedin.com/company/abata-d-o-o/"
+          href="https://www.linkedin.com/company/abata-d-o-o/"
+        >
+          <i class="uil uil-linkedin"></i>
+        </a>
+      </div>
+      <div class="footer__text">
+        <p>
+          <i class="uil uil-location-point"></i>Nova Cesta 52, 10000 Zagreb,
+          Hrvatska
+        </p>
+      </div>
+      <div class="footer__text">
+        <p><i class="uil uil-envelope"></i>info@abata.hr</p>
+      </div>
+      <div class="footer__text">
+        <p><i class="uil uil-angle-right-b"></i>OIB: 32563165629</p>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

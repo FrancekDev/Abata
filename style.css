@@ -10,8 +10,9 @@
   --text-font-primary: sans-serif;
   --text-color: rgb(91, 91, 91);
   --background-color: rgb(207, 207, 207);
-  --background-color-secondary: rgba(208, 228, 96, 0.59);
+  --background-color-secondary: rgba(164, 228, 96, 0.6);
   --header-color: rgba(255, 255, 255, 0.6);
+  --input-color: #e8e8e8;
 }
 
 html {
@@ -432,7 +433,7 @@ body.open .hamburger__bg {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #e8e8e8;
+  background-color: var(--input-color);
   border-radius: 16px;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
 }
@@ -452,6 +453,7 @@ body.open .hamburger__bg {
   width: 100%;
   height: 100%;
   transition: 0.3s ease-in-out;
+  object-fit: cover;
 }
 
 .usluge__img:hover {
@@ -486,12 +488,6 @@ body.open .hamburger__bg {
   margin-top: 24px;
 }
 
-.info__card {
-  /* position: relative;
-  top: 50%;
-  transform: translateY(-50%); */
-}
-
 .info__wraper {
   display: flex;
   justify-content: center;
@@ -501,7 +497,7 @@ body.open .hamburger__bg {
   width: 80%;
   border-radius: 32px;
   background-color: var(--background-color-secondary);
-  box-shadow: rgb(209, 228, 96) 0px 0px 70px 10px;
+  box-shadow: rgb(166, 230, 99) 0px 0px 70px 20px;
 }
 
 .subheading_address {
@@ -568,9 +564,9 @@ body.open .hamburger__bg {
   margin: 4px 0;
   padding: 10px;
   border-radius: 16px;
-  background: #e8e8e8;
+  background: var(--input-color);
   transition: 0.3s;
-  outline-color: #e8e8e8;
+  outline-color: var(--input-color);
   font-family: var(--text-font-primary);
   letter-spacing: 0.8px;
   font-size: 14px;
@@ -654,7 +650,7 @@ textarea.input__form::-webkit-scrollbar-track {
 }
 
 textarea.input__form::-webkit-scrollbar-thumb {
-  background-color: rgba(208, 228, 96, 0.6);
+  background-color: rgba(164, 228, 96, 0.6);
   border-radius: 50px;
   border: 3px solid rgba(37, 37, 37, 0.5);
 }
@@ -668,10 +664,12 @@ textarea.input__form::-webkit-scrollbar-button {
   font-size: 15px;
   font-weight: 600;
   padding: 17px 40px;
-  margin: 3px 0;
+  width: 100%;
+  margin: 3px auto;
   border-radius: 50px;
   border: 0;
-  background-color: #e8e8e8;
+  background-color: var(--input-color);
+  color: rgb(61, 61, 61);
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 1px;
   transition: all 0.5s ease;
@@ -694,16 +692,36 @@ textarea.input__form::-webkit-scrollbar-button {
   transition: 100ms;
 }
 
+.alert__message {
+  color: rgb(61, 61, 61);
+  text-align: center;
+  margin: 5px;
+  display: none;
+}
+
 /* --------------- Footer Styling ---------------- */
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 150px;
   position: relative;
   bottom: 0;
   left: 0;
-  background-color: var(--header-color);
+  background-color: var(--input-color);
   backdrop-filter: blur(5px);
+}
+
+.footer__text {
+  font-size: 14px;
+  margin: 6px;
+}
+
+.footer__text i {
+  margin-right: 4px;
 }
 
 /* --------------- Gallery Section Styling ---------------- */
@@ -790,7 +808,7 @@ textarea.input__form::-webkit-scrollbar-button {
 .gallery__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   object-position: 50% 50%; /* pozicionira sliku u sredinu */
   /* cursor: pointer; */
   transition: 0.5s ease-in-out;
@@ -806,7 +824,7 @@ textarea.input__form::-webkit-scrollbar-button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #e8e8e8;
+  color: var(--input-color);
   font-size: 24px;
   pointer-events: none;
   z-index: 10;
@@ -819,10 +837,11 @@ textarea.input__form::-webkit-scrollbar-button {
   opacity: 1;
   animation: move-down 0.3s linear;
   padding: 8px;
+  border-radius: 15px;
 }
 
-@media (max-width: 500px) {
-  .gallery /*container*/ {
+@media (max-width: 600px) {
+  .gallery {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -850,6 +869,18 @@ textarea.input__form::-webkit-scrollbar-button {
 @media (min-width: 500px) {
   .gallery__heading::after {
     width: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gallery__text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery__text {
+    font-size: 18px;
   }
 }
 
