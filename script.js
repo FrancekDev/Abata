@@ -21,18 +21,46 @@ window.addEventListener("scroll", stickyNavbar);
 
 /* --------------- Hamburger Menu Form ---------------- */
 
-// let isOpen = false;
+/*
+let classList1 = hamburgerMenu.classList;
+let classList2 = hamburger.classList;
+let classList3 = header.classList;
 
-// if ((document.body.classList = "open")) {
-//   isOpen = true;
-// }
+let listMenu = [...classList1];
+let listHambur = [...classList2];
+let listHeader = [...classList3];
+
+console.log(listMenu);
+
+function toggleHamburger() {
+  // let isOpen = false;
+
+  if (
+    listMenu.includes("open") &&
+    listHambur.includes("open") &&
+    listHeader.includes("open")
+  ) {
+    console.log("open");
+    // isOpen = true;
+  }
+  
+  if (isOpen) {
+hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.classList.remove("open");
+});
+  }
+}
+toggleHamburger();
+*/
 
 hamburger.addEventListener("click", () => {
-  document.body.classList.toggle("open");
+  hamburgerMenu.classList.toggle("open");
+  hamburger.classList.toggle("open");
+  header.classList.toggle("open");
 });
 
 hamburgerMenu.addEventListener("click", () => {
-  document.body.classList.remove("open");
+  hamburgerMenu.classList.remove("open");
 });
 
 /* --------------- emailJS Form ---------------- */
@@ -74,17 +102,18 @@ button.addEventListener("click", function () {
 });
 
 /* --------------- Image Touch Mechanic ---------------- */
-
+/*
 const galleryImage = document.querySelector(".gallery__img");
 
-/*
-const isTouch = function isTouchDevice() {
-  return (('ontouchstart' in window) ||
-     (navigator.maxTouchPoints > 0) ||
-     (navigator.msMaxTouchPoints > 0));
+if (
+  function isTouchDevice() {
+    return (
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0 ||
+      navigator.msMaxTouchPoints > 0
+    );
+  }
+) {
+  galleryImage.addEventListener("touchStart", function () {});
 }
 */
-
-// if (window.innerWidth < 770) {
-//   galleryImage.addEventListener("touchStart", function () {});
-// }
