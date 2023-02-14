@@ -59,6 +59,7 @@ hamburger.addEventListener("click", () => {
   header.classList.toggle("open");
 });
 
+//treba biti klik na link a ne na wrapper
 hamburgerMenu.addEventListener("click", () => {
   hamburgerMenu.classList.remove("open");
 });
