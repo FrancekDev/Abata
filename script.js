@@ -7,7 +7,7 @@ const button = document.getElementById("button");
 
 const hamburger = document.querySelector(".hamburger");
 const hamburgerMenu = document.querySelector(".hamburger__bg");
-const section = document.querySelector(".section");
+const hamburgerLink = document.querySelectorAll(".hamburger__link");
 
 /* --------------- Sticky Navbar ---------------- */
 
@@ -59,10 +59,11 @@ hamburger.addEventListener("click", () => {
   header.classList.toggle("open");
 });
 
-//treba biti klik na link a ne na wrapper
-hamburgerMenu.addEventListener("click", () => {
-  hamburgerMenu.classList.remove("open");
-});
+hamburgerLink.forEach((hamburgerLink) =>
+  hamburgerLink.addEventListener("click", () => {
+    hamburgerMenu.classList.remove("open");
+  })
+);
 
 /* --------------- emailJS Form ---------------- */
 
@@ -102,9 +103,9 @@ button.addEventListener("click", function () {
   }
 });
 
-/* --------------- Image Touch Mechanic ---------------- */
-/*
-const galleryImage = document.querySelector(".gallery__img");
+/* --------------- Image Touch Mechanic ---------------- 
+
+const galleryImage = document.querySelector(".gallery__item");
 
 if (
   function isTouchDevice() {
@@ -115,6 +116,9 @@ if (
     );
   }
 ) {
-  galleryImage.addEventListener("touchStart", function () {});
+  galleryImage.addEventListener("touchStart", () => {
+    // galleryImage.classList.add(".touch");
+    console.log("aaaa");
+  });
 }
 */

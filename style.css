@@ -170,16 +170,20 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 180px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .hamburger__link {
-  display: flex;
   position: relative;
-  margin: 10px;
+  text-align: center;
+  margin: 30px auto;
+  width: 100%;
   color: var(--text-color);
   font-weight: 600;
   font-family: var(--text-font-primary);
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 0.4px;
   text-decoration: none;
   opacity: 0.9;
@@ -193,15 +197,17 @@ body::-webkit-scrollbar {
   width: 0;
   height: 3px;
   border-radius: 5px;
+  text-align: center;
   background-color: var(--text-color);
   bottom: -2px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0.85;
   transition: 0.3s ease-out;
 }
 
 .hamburger__link:hover:after {
-  width: 100%;
+  width: 20%;
 }
 
 .nav__link {
@@ -282,7 +288,7 @@ body::-webkit-scrollbar {
 .section__inner {
   width: 85%;
   margin: 0 auto;
-  padding: 60px 0px;
+  padding: 70px 0px;
 }
 
 .section__inner_projects {
@@ -833,7 +839,7 @@ textarea.input__form::-webkit-scrollbar-button {
   backdrop-filter: blur(5px) saturate(1.8);
 }
 
-.gallery__item:hover .gallery__text {
+.touch {
   opacity: 1;
   animation: move-down 0.3s linear;
   padding: 8px;
@@ -875,6 +881,15 @@ textarea.input__form::-webkit-scrollbar-button {
 @media (max-width: 1024px) {
   .gallery__text {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery__item:hover .gallery__text {
+    opacity: 1;
+    animation: move-down 0.3s linear;
+    padding: 8px;
+    border-radius: 15px;
   }
 }
 
