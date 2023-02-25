@@ -68,10 +68,6 @@ body::-webkit-scrollbar {
   margin: 0 auto;
 }
 
-/* .header__inner {
-  width: 1300px;
-} */
-
 .header__logo-link {
   display: flex;
   align-items: center;
@@ -193,21 +189,14 @@ body::-webkit-scrollbar {
 .hamburger__link::after {
   content: "";
   position: absolute;
-  display: block;
-  width: 0;
+  width: 25%;
   height: 3px;
   border-radius: 5px;
-  text-align: center;
   background-color: var(--text-color);
-  bottom: -2px;
+  bottom: -7px;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0.85;
   transition: 0.3s ease-out;
-}
-
-.hamburger__link:hover:after {
-  width: 20%;
 }
 
 .nav__link {
