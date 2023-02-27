@@ -91,7 +91,7 @@ button.addEventListener("click", function () {
       message: document.getElementById("message").value,
     };
     emailjs
-      .send("service_el5a1of", "template_2i0vj61", params)
+      .send("service_bttgcu6", "template_2i0vj61", params)
       .then(function sendEmail() {
         const alertMessageEl = document.querySelector(".alert__message");
         alertMessageEl.style.display = "block";
