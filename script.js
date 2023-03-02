@@ -97,7 +97,7 @@ button.addEventListener("click", function () {
         alertMessageEl.style.display = "block";
 
         setTimeout(() => {
-          alertMessageEl.style.display = "none";
+          alertMessageEl.style.color = "rgb(61, 61, 61)";
         }, 3000);
       });
   }

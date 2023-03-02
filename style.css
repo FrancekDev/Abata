@@ -687,16 +687,16 @@ textarea.input__form::-webkit-scrollbar-button {
   transition: 100ms;
 }
 
-.input__button:focus {
+.input__button:focus:active {
   outline: none;
   box-shadow: none;
 }
 
 .alert__message {
-  color: rgb(61, 61, 61);
+  color: var(--background-color);
   text-align: center;
   margin: 5px;
-  display: none;
+  display: block;
 }
 
 /* --------------- Footer Styling ---------------- */
