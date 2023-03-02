@@ -687,6 +687,11 @@ textarea.input__form::-webkit-scrollbar-button {
   transition: 100ms;
 }
 
+.input__button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .alert__message {
   color: rgb(61, 61, 61);
   text-align: center;
