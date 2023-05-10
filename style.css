@@ -295,7 +295,7 @@ body::-webkit-scrollbar {
   position: relative;
   padding-bottom: 4px;
   margin-bottom: 24px;
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
 }
 
@@ -338,7 +338,7 @@ body::-webkit-scrollbar {
   transform: translateX(-50%);
   background-color: var(--text-color);
   content: "";
-  width: 340px;
+  width: 300px;
   height: 2px;
 }
 
@@ -919,13 +919,13 @@ textarea.input__form::-webkit-scrollbar-button {
 /* --------------- Privacy Section Styling ---------------- */
 
 .section__inner_privacy {
-  width: 50%;
+  width: 70%;
 }
 
 .privacy__heading {
-  font-size: 32px;
+  font-size: 20px;
   position: relative;
-  margin-bottom: 64px;
+  margin-bottom: 34px;
   text-align: center;
 }
 
@@ -937,7 +937,7 @@ textarea.input__form::-webkit-scrollbar-button {
   background-color: var(--text-color);
   border-radius: 10px;
   content: "";
-  width: 650px;
+  width: 260px;
   height: 2px;
 }
 
@@ -947,4 +947,24 @@ textarea.input__form::-webkit-scrollbar-button {
 
 .privacy__text {
   margin-bottom: 16px;
+}
+
+@media (min-width: 550px) {
+  .privacy__heading::after {
+    width: 400px;
+  }
+}
+@media (min-width: 650px) {
+  .privacy__heading::after {
+    width: 600px;
+  }
+  .privacy__heading {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .privacy__heading {
+    font-size: 32px;
+  }
 }
